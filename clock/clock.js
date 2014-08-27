@@ -18,6 +18,11 @@ function drawClock(ctx,imgPath){
 	var img = new Image();
 	img.onload = function(){
 		ctx.drawImage(img,0,0);
+		ctx.font = "80px 宋体";
+		ctx.fillStyle = "rgb(4,96,59)";
+		var text = "ROLEX";
+		ctx.strokeText(text,300,300);
+		ctx.fillText(text,300,300);
 	}
 	img.src = imgPath;
 }
