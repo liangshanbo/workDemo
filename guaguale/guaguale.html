@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		#panel{width:200px;height:120px;margin:30px auto;position:relative;}
+		canvas{position:absolute;top:0;left:0;}
+	</style>
+</head>
+<body>
+	<div id="panel">
+		<canvas id="down" width="200" height="120"></canvas>
+		<canvas id="up" width="200" height="120"></canvas>
+	</div>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var isMouseDown = false,panel = $("#panel")[0];
+		//down
+		var down = $("#down")[0].getContext("2d");
+		down.font = "50px 楷体";
+		down.fillText("中奖啦",25,75);
+		//up
+		var up = $("#up")[0].getContext("2d");
+		up.fillStyle = "#ccc";
+		up.fillRect(0,0,200,120);
+		//
+		$("#up").mousedown(function(e){
+			isMouseDown = true;
+			draw(e,panel,up);
+		});
+		//
+		window.onmouseup = function(){
+			isMouseDown = false;
+		}
+		//
+		$("#up").mousemove(function(e){
+			if(isMouseDown){
+				up.globalCompositeOperation = "destination-out";
+				draw(e,panel,up);
+			}
+		});
+	});
+	function draw(e,panel,up){
+		var x = e.pageX - panel.offsetLeft;
+		var y = e.pageY - panel.offsetTop;
+		up.beginPath();
+		up.arc(x,y,10,0,Math.PI*2,true);
+		up.fill();
+		up.closePath();
+	}
+</script>
+</body>
+</html>
