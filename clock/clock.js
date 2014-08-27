@@ -19,6 +19,10 @@ function drawClock(ctx,imgPath){
 	img.onload = function(){
 		ctx.drawImage(img,0,0);
 		ctx.font = "80px 宋体";
+		ctx.shadowColor = "#f00";
+		ctx.shadowBlur = 3;
+		ctx.shadowOffsetX = 3;
+		ctx.shadowOffsetY = 3;
 		ctx.fillStyle = "rgb(4,96,59)";
 		var text = "ROLEX";
 		ctx.strokeText(text,300,300);
