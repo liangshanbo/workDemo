@@ -68,23 +68,26 @@ function secondHand(hand,x,y){
 }
 function init(hand,x,y,hour,minute,second){
 	hand.clearRect(0,0,width,height);
+	//second
 	hand.save();
-	hand.translate(x,y);
-	hand.rotate(Math.PI/30 * (hour * 5 + Math.floor(minute/12)));
-	hand.translate(-x,-y);
-	hourHand(hand,x,y);
+	hand.translate(x,x);
+	hand.rotate(Math.PI/30 * second);
+	hand.translate(-y,-y);
+	secondHand(hand,x,y);
 	hand.restore();
+	//Minute
 	hand.save();
 	hand.translate(x,y);
 	hand.rotate(Math.PI/30 * minute);
 	hand.translate(-x,-y);
 	minuteHand(hand,x,y);
 	hand.restore();
+	//Hour
 	hand.save();
-	hand.translate(x,x);
-	hand.rotate(Math.PI/30 * second);
-	hand.translate(-y,-y);
-	secondHand(hand,x,y);
+	hand.translate(x,y);
+	hand.rotate(Math.PI/30 * (hour * 5 + Math.floor(minute/12)));
+	hand.translate(-x,-y);
+	hourHand(hand,x,y);
 	hand.restore();
 }
 
