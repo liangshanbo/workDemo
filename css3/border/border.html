@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 300px;height: 300px;margin: 100px;border: 1px solid #f00;}
+		#radius{border-radius:20px 10px 50px;}
+		#shadow{box-shadow:2px 2px 5px #0ff;}
+		#image{
+			padding:30px;
+			-webkit-border-image:url(orangel.png) 10 stretch;
+			-moz-border-image:url(orangel.png) 50px round;
+			-ms-border-image:url(orangel.png) 10px round;
+			border-image:url(orangel.png) 10px round;
+		}
+	</style>
+</head>
+<body>
+	<div id="radius"></div>
+	<div id="shadow"></div>
+	<div id="image"></div>
+</body>
+</html>

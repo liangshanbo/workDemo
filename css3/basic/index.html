@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic</title>
+	<style>
+		div{width:600px;height: 600px; border: 1px solid #0ff;margin: 0 auto;}
+		div p{text-transform:uppercase;}
+		div p:first-child{text-transform:lowercase;}
+		div p:last-child{text-transform:capitalize;}
+		div h1{
+			-moz-text-decoration-line:underline;
+			-moz-text-decoration-style:wavy;
+			-moz-text-decoration-color:#f00;
+		}
+		div ul{
+			list-style-image: url(pointer.png);
+		}
+		div ul li{height: 30px;line-height: 30px;}
+		div table{border: 1px solid #0f0;border-collapse: collapse;margin: 30px 0;}
+		div table td{border: 1px solid #0f0;border-collapse: collapse;width: 100px;}
+		div table.tab td{table-layout: fixded;}
+		div p{
+			width: 500px;
+			height: 30px;
+			text-overflow:ellipsis;
+			overflow: hidden;
+			white-space:nowrap;
+			outline: 6px ridge #f00;
+			resize:both;
+		}
+	</style>
+</head>
+<body>
+	<div id="f">
+		<p>this is my life.</p>
+		<p>this is my life.</p>
+		<p>this is my life.</p>
+		<h1>You are my love.</h1>
+		<ul>
+			<li>Hello World 1</li>
+			<li>Hello World 2</li>
+			<li>Hello World 3</li>
+			<li>Hello World 4</li>
+			<li>Hello World 5<br/>Hello World 5</li>
+		</ul>
+		<p>默认的自动算法。布局将基于各单元格的内容，默认的自动算法。布局将基于各单元格的</p>
+		<table>
+			<tr>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+			</tr>
+		</table>
+		<table class="tab">
+			<tr>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+				<td>默认的自动算法。布局将基于各单元格的内容，</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
