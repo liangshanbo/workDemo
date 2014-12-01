@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>相邻选择符 (E+F)_CSS参考手册_web前端开发参考手册系列</title>
+<meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com" />
+<meta name="copyright" content="www.doyoe.com" />
+<style>
+p~p{color:#f00;}
+a:link{color: #f00;}
+a:hover{color: #0f0;}
+a:active{color: #00f;}
+p:first-of-type{color:#0ff;}
+#name:focus,a:focus{outline: 1px solid #f00;}
+</style>
+</head>
+<body>
+<div class="test">
+	<h3>这是一个标题</h3>
+	<p>这是一个文字段落</p>
+	<p>这是一个文字段落</p>
+	<h3>这是一个标题</h3>
+	<p>这是一个文字段落</p>
+	<h3>这是一个标题</h3>
+	<p>这是一个文字段落</p>
+	<p>这是一个文字段落</p>
+	<h3>1234</h3>
+	<a href="http://www.baidu.com">baidu</a>
+	<input type="text" name="name" id="name">
+</div>
+</body>
+</html>
+			
