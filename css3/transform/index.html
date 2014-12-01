@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style>
+		@keyframes book{
+			0%{-moz-transform-origin:left top;-moz-transform:rotate(30deg);}
+			25%{-moz-transform-origin:left top;-moz-transform:rotate(45deg);}
+			50%{-moz-transform-origin:left top;-moz-transform:rotate(60deg);}
+			75%{-moz-transform-origin:left top;-moz-transform:rotate(45deg);}
+			100%{-moz-transform-origin:left top;-moz-transform:rotate(30deg);}
+		}
+		div{width: 200px;height: 200px;margin: 300px;
+			background: -moz-linear-gradient(left,#f00,#0f0 50%,#00f 100%);
+			/*-moz-transform-origin:left top;
+			-moz-transform:rotate(45deg);*/
+			transition:transform 1s;
+			animation:book 2s ease infinite;
+		}
+		div:hover{
+			-moz-transform:rotate(30deg);
+			-moz-transform-origin:left top;
+		}
+	</style>
+</head>
+<body>
+	<div id="t"></div>
+</body>
+</html>
